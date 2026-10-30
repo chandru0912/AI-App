@@ -1,0 +1,15 @@
+{
+  "name": "my-life-ai",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently -k --raw \"npm --prefix server run dev\" \"npm --prefix mobile start\"",
+    "server": "npm --prefix server run dev",
+    "mobile": "npm --prefix mobile start",
+    "test": "npm --prefix server test",
+    "typecheck": "npm --prefix server run typecheck && npm --prefix mobile run typecheck"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}
